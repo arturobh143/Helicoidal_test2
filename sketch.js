@@ -75,7 +75,7 @@ function setup() {
     button3.size(100,50);
 	button3.mousePressed(ch_vista);
 	
-	slider1 = createSlider(0.5,2.5,2,0.25);
+	slider1 = createSlider(0.5,2.5,0.5,0.25);
     slider1.position(x_dat+20, y_dat+110);
     slider1.style('width', '180px'); 
 	slider1.attribute('disabled','');
@@ -122,8 +122,8 @@ function draw() {
 	flujo_fria = slider1.value();
 	flujo_caliente = slider2.value();
 	potencia = slider3.value();
-	temp_fria_out_ob = -0.6461*pow(flujo_caliente,2) + 4.5015*flujo_caliente + 26.968;
-	temp_caliente_out_ob = -1.8535*pow(flujo_caliente,2) + 9.4992*flujo_caliente + 50.091;
+	temp_fria_out_ob = -1.3851*pow(flujo_caliente,2) + 8.9107*flujo_caliente + 30.467;
+	temp_caliente_out_ob = -1.4462*pow(flujo_caliente,2) + 6.9574*flujo_caliente + 57.537;
 	
 	if((temp_fria_out>temp_fria_out_ob)&&(abs(temp_fria_out-temp_fria_out_ob)>0.001)){
 		temp_fria_out = temp_fria_out - 0.001;
